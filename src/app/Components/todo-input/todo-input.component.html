@@ -1,0 +1,4 @@
+<form (ngSubmit)="newTodo.emit(todoDescription)" #todoForm="ngForm">
+  <md-input type="text" placeholder="add a todo..." [(ngModel)]="todoDescription" name="description"></md-input>
+  <button md-raised-button color="primary" type="submit">PRIMARY</button>
+</form>

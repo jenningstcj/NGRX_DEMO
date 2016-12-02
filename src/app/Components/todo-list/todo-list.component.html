@@ -1,0 +1,10 @@
+<md-card *ngFor="let t of todos" [ngClass]="{'strike': t.IsComplete}">
+  {{t.Description}}
+
+  <div style="float:right">
+    Is Complete:
+    <md-checkbox [ngModel]="t.IsComplete" (click)="toggleComplete.emit(t.Id)">
+
+    </md-checkbox>
+  </div>
+</md-card>
