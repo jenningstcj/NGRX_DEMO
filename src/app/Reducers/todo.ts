@@ -28,7 +28,7 @@ export const todoReducer: ActionReducer<Todo[]> = (state: Todo[] = [], action: A
 
     case ADD_TODO:
       return [
-        ...state, Object.assign({}, { Description: action.payload, IsComplete: false, Id: state.length + 1 })
+        ...state, Object.assign({}, { Description: action.payload, IsComplete: false, Id: window.crypto.getRandomValues(new Uint32Array(1))[0] })
       ];
 
     case DELETE_TODO:

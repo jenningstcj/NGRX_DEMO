@@ -10,6 +10,7 @@ import {Todo} from '../../Models/index';
 export class TodoListComponent {
   @Input() todos: Todo[];
   @Output() toggleComplete = new EventEmitter();
+  @Output() deleteTodo = new EventEmitter();
 
   constructor() { }
 

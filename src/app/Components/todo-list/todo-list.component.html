@@ -1,6 +1,8 @@
 <md-card *ngFor="let t of todos" [ngClass]="{'strike': t.IsComplete}">
   {{t.Description}}
-
+<div style="float:right; margin-left:15px; margin-right:15px; cursor:pointer">
+  <i class="material-icons" (click)="deleteTodo.emit(t.Id)">delete</i>
+</div>
   <div style="float:right">
     Is Complete:
     <md-checkbox [ngModel]="t.IsComplete" (click)="toggleComplete.emit(t.Id)">

@@ -2,3 +2,7 @@
   text-decoration:line-through;
   background-color: gray;
 }
+
+md-card{
+  margin-top:15px;
+}
